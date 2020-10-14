@@ -1,14 +1,15 @@
 basic.forever(function () {
-    for (let index = 0; index <= 4; index++) {
-        for (let A = 0; A <= 4; A++) {
-            led.plot(A, index)
-            basic.pause(200)
+    basic.clearScreen()
+    basic.pause(100)
+    for (let index = 0; index <= 9; index++) {
+        basic.showNumber(index)
+        basic.pause(100)
+        basic.clearScreen()
+        basic.pause(100)
+        if (index == 5) {
+            break;
         }
     }
-    for (let index = 0; index <= 4; index++) {
-        for (let A = 0; A <= 4; A++) {
-            led.unplot(A, index)
-            basic.pause(200)
-        }
-    }
+    basic.showIcon(IconNames.Heart)
+    basic.pause(100)
 })
